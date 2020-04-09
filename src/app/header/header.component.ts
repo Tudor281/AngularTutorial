@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  @Output('selectedPageEvent') selectedPageEvent = new EventEmitter<string>();
 
+  showRecipes() {
+    this.selectedPageEvent.emit('recipes');
+  }
+
+  showShopping() {
+    this.selectedPageEvent.emit('shopping');
+  }
 }

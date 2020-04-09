@@ -10,9 +10,11 @@ export class HeaderComponent {
 
   showRecipes() {
     this.selectedPageEvent.emit('recipes');
+    console.log("Recipes");
   }
 
   showShopping() {
     this.selectedPageEvent.emit('shopping');
+    console.log("Shopping");
   }
 }

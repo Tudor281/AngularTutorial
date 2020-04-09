@@ -8,7 +8,7 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input('tudor') recipe: Recipe;
-  @Output('recipeSelected') recipeSelected = new EventEmitter<Recipe>();
+  @Output('recipeSelected') recipeSelected = new EventEmitter<void>();
 
   constructor() { }
 
@@ -16,6 +16,6 @@ export class RecipeItemComponent implements OnInit {
   }
 
   onClick() {
-    this.recipeSelected.emit(this.recipe);
+    this.recipeSelected.emit();
   }
 }

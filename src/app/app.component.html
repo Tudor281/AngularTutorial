@@ -1,9 +1,8 @@
-<app-header (selectedPageEvent)="setCurrentPage($event)">Daca nu scrii ceva aici, s-ar putea sa n-o ia</app-header>
+<app-header>Daca nu scrii ceva aici, s-ar putea sa n-o ia</app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="selectedPage=='recipes'"></app-recipes>
-      <app-shopping-list *ngIf="selectedPage=='shopping'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
